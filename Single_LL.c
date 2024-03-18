@@ -75,11 +75,16 @@ void insertNPos()
 {
     int pos, ele, i;
     struct node *p, *q;
+    if (start == NULL)
+    {
+        printf("\nList is Empty\n");
+        return;
+    }
     printf("\nEnter the position to insert: ");
     scanf("%d", &pos);
     if (pos < 1)
     {
-        printf("Invalid position\n");
+        printf("\nInvalid position\n");
         return;
     }
     p = start;
@@ -108,7 +113,7 @@ void deleteBeg() {
     struct node *temp;
     if (start == NULL)
     {
-        printf("List is empty\n");
+        printf("\nList is empty\n");
         return;
     }
     temp = start;
@@ -121,7 +126,7 @@ void deleteEnd()
     struct node *p, *prev;
     if (start == NULL)
     {
-        printf("List is empty\n");
+        printf("\nList is empty\n");
         return;
     }
     if (start->next == NULL)
@@ -144,6 +149,11 @@ void deleteNPos()
 {
     int pos, i;
     struct node *p, *prev;
+    if (start == NULL)
+    {
+        printf("\nList is Empty\n");
+        return;
+    }
     printf("\nEnter the position to delete: ");
     scanf("%d", &pos);
     if (pos < 1)
@@ -177,7 +187,7 @@ void display()
     struct node *p = start;
     if (p == NULL)
     {
-        printf("List is empty\n");
+        printf("\nList is empty\n");
         return;
     }
     printf("List elements: ");
